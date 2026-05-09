@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feliz Dia das Mães ❤️</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Fundo de flores -->
     <div class="particles" id="particles"></div>
 
+    <!-- Hero -->
     <header class="hero">
-        <div class="hero-content">
-            <h1>Feliz Dia das Mães ❤️</h1>
-            <p>Uma homenagem especial pra você, mãe 💖</p>
-            <button onclick="scrollToSection('mensagem')">Ver mensagem</button>
-        </div>
+        <h1>Feliz Dia das Mães ❤️</h1>
+        <p>Uma homenagem especial para você</p>
+
+        <button onclick="mostrarMensagem()">
+            Abrir Homenagem 💌
+        </button>
     </header>
 
-    <section id="mensagem" class="section">
+    <!-- Mensagem (começa escondida) -->
+    <section id="mensagem" class="section hidden">
         <h2>Minha mensagem</h2>
         <p>
             Mãe, você é meu maior exemplo de amor, força e carinho.
@@ -28,8 +31,9 @@
         </p>
     </section>
 
+    <!-- Galeria -->
     <section class="section">
-        <h2>Galeria</h2>
+        <h2>Memórias</h2>
 
         <div class="galeria">
             <img src="images/foto1.jpg" onclick="abrirImagem(this.src)">
@@ -38,12 +42,13 @@
         </div>
     </section>
 
-    <div id="modal" class="modal" onclick="fecharModal()">
+    <!-- Modal -->
+    <div id="modal" onclick="fecharModal()">
         <img id="imgModal">
     </div>
 
     <footer>
-        <p>Feito com ❤️ para minha mãe</p>
+        Feito com ❤️
     </footer>
 
     <script src="script.js"></script>
