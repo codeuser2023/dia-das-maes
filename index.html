@@ -1,56 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz Dia das Mães ❤️</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dia das Mães ❤️</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Fundo de flores -->
-    <div class="particles" id="particles"></div>
+<div class="particles" id="particles"></div>
 
-    <!-- Hero -->
-    <header class="hero">
-        <h1>Feliz Dia das Mães ❤️</h1>
-        <p>Uma homenagem especial para você</p>
+<header class="hero">
+    <h1>Feliz Dia das Mães ❤️</h1>
+    <p>Uma homenagem especial</p>
 
-        <button onclick="mostrarMensagem()">
-            Abrir Homenagem 💌
-        </button>
-    </header>
+    <button onclick="abrirMensagem()">Abrir presente 💌</button>
+</header>
 
-    <!-- Mensagem (começa escondida) -->
-    <section id="mensagem" class="section hidden">
-        <h2>Minha mensagem</h2>
-        <p>
-            Mãe, você é meu maior exemplo de amor, força e carinho.
-            Obrigado por tudo que você faz por mim todos os dias.
-            Te amo infinitamente ❤️
-        </p>
-    </section>
+<section id="mensagem" class="mensagem">
+    <h2>Minha mensagem</h2>
+    <p>
+        Mãe, obrigado por tudo que você faz por mim.
+        Você é meu maior amor ❤️
+    </p>
+</section>
 
-    <!-- Galeria -->
-    <section class="section">
-        <h2>Memórias</h2>
+<section class="galeria">
+    <img src="images/foto1.jpg" onclick="abrirImg(this.src)">
+    <img src="images/foto2.jpg" onclick="abrirImg(this.src)">
+    <img src="images/foto3.jpg" onclick="abrirImg(this.src)">
+</section>
 
-        <div class="galeria">
-            <img src="images/foto1.jpg" onclick="abrirImagem(this.src)">
-            <img src="images/foto2.jpg" onclick="abrirImagem(this.src)">
-            <img src="images/foto3.jpg" onclick="abrirImagem(this.src)">
-        </div>
-    </section>
+<div id="modal" onclick="fecharModal()">
+    <img id="modalImg">
+</div>
 
-    <!-- Modal -->
-    <div id="modal" onclick="fecharModal()">
-        <img id="imgModal">
-    </div>
-
-    <footer>
-        Feito com ❤️
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
