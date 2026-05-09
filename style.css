@@ -10,6 +10,7 @@ body {
 .hero-img {
     width: 220px;
     max-width: 100%;
+    border-radius: 10px;
     height: auto;
     display: block;
     margin: 20px auto;
