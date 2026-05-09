@@ -1,38 +1,35 @@
-function mostrarMensagem() {
-    const msg = document.getElementById("mensagem");
-
-    msg.classList.remove("hidden");
-    msg.classList.add("show");
-
-    msg.scrollIntoView({ behavior: "smooth" });
+function abrirMensagem() {
+const msg = document.getElementById("mensagem");
+msg.classList.add("show");
+msg.scrollIntoView({ behavior: "smooth" });
 }
 
-/* MODAL */
-function abrirImagem(src) {
-    document.getElementById("modal").style.display = "flex";
-    document.getElementById("imgModal").src = src;
+/* modal */
+function abrirImg(src){
+document.getElementById("modal").style.display="flex";
+document.getElementById("modalImg").src=src;
 }
 
-function fecharModal() {
-    document.getElementById("modal").style.display = "none";
+function fecharModal(){
+document.getElementById("modal").style.display="none";
 }
 
-/* FLORES MELHORADAS */
+/* flores estáveis */
 const particles = document.getElementById("particles");
 
-function criarFlor() {
-    const flor = document.createElement("div");
+function flor(){
+const d = document.createElement("div");
 
-    const emojis = ["🌸", "🌺", "🌷", "💐", "🌹"];
-    flor.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+const emojis=["🌸","🌺","🌷","💐"];
+d.innerHTML = emojis[Math.floor(Math.random()*emojis.length)];
 
-    flor.style.left = Math.random() * 100 + "vw";
-    flor.style.fontSize = (Math.random() * 20 + 15) + "px";
-    flor.style.animationDuration = (Math.random() * 3 + 3) + "s";
+d.style.left = Math.random()*100+"vw";
+d.style.fontSize = (15+Math.random()*20)+"px";
+d.style.animationDuration = (3+Math.random()*3)+"s";
 
-    particles.appendChild(flor);
+particles.appendChild(d);
 
-    setTimeout(() => flor.remove(), 6000);
+setTimeout(()=>d.remove(),6000);
 }
 
-setInterval(criarFlor, 250);
+setInterval(flor,300);
