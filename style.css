@@ -12,6 +12,10 @@ body {
     color: white;
 }
 
+.espaco {
+    height: 30px;
+}
+
 button {
     padding: 10px 20px;
     border: none;
