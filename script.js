@@ -2,6 +2,7 @@ function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
 
+/* MODAL */
 function abrirImagem(src) {
     const modal = document.getElementById("modal");
     const img = document.getElementById("imgModal");
@@ -13,14 +14,24 @@ function fecharModal() {
     document.getElementById("modal").style.display = "none";
 }
 
-// partículas simples
+/* FLORES */
 const particles = document.getElementById("particles");
 
-for (let i = 0; i < 20; i++) {
+function criarFlor() {
     const p = document.createElement("div");
-    p.innerHTML = "🌸";
-    p.style.position = "absolute";
-    p.style.left = Math.random() * 100 + "%";
-    p.style.animation = "fall 5s linear infinite";
+
+    const emojis = ["🌸", "🌺", "🌷", "💐", "🌹"];
+    p.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+
+    p.style.left = Math.random() * 100 + "vw";
+    p.style.fontSize = (15 + Math.random() * 20) + "px";
+    p.style.animationDuration = (3 + Math.random() * 3) + "s";
+
     particles.appendChild(p);
+
+    setTimeout(() => {
+        p.remove();
+    }, 6000);
 }
+
+setInterval(criarFlor, 300);
